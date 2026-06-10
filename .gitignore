@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+
+# Local IDE and OS files
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+
+# Logs and runtime outputs
+*.log
+runs/
+outputs/
+resultados/
+predicoes/
+tmp/
+temp/
+
+# Large datasets and generated datasets
+Desafio_2/data/images/
+Desafio_2/data/labels/
+Desafio_2/**/dataset_yolo_split/
+Desafio_2/**/dataset_unet_masks/
+Desafio_1/**/dataset_yolo_sintetico/
+
+# Model weights and exported models
+*.pt
+*.pth
+*.onnx
+*.engine
+*.tflite
+*.mlmodel
+*.joblib
+*.pkl
+
+# Dataset caches
+*.cache
+labels.cache
+
+# Archives
+*.zip
+*.rar
+*.7z
+*.tar
+*.tar.gz
