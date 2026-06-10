@@ -1,0 +1,67 @@
+name: vc_01
+
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+
+dependencies:
+  # Runtime base
+  - python=3.11
+  - pip
+
+  # PyTorch stack com CUDA 12.1.
+  # Mantem torch/torchvision/torchaudio na mesma familia de versoes.
+  - pytorch=2.2.2
+  #- torchvision=0.17.2
+  - torchvision
+  #- torchaudio=2.2.2
+  - torchaudio
+  - pytorch-cuda=12.1
+  - numpy<2
+
+  # Visao computacional, video e modelos
+  - ultralytics
+  - openai-clip
+  - scikit-image
+  - opencv
+  - ffmpeg
+  - ffmpeg-python
+  - av
+
+  # Utilitarios de dados e progresso
+  - tqdm
+  - datasets
+
+  # Evita quebra futura do CLIP com pkg_resources.
+  # O warning de deprecacao ainda pode aparecer.
+  - "setuptools<81"
+
+  # Analise de dados e visualizacao
+  - scipy
+  - pandas
+  - matplotlib
+  - seaborn
+  - plotly
+  - polars
+  - pyarrow
+  - duckdb
+  - sqlalchemy
+  - duckdb-engine
+  - statsmodels
+  - openpyxl
+  - dash
+  - dash-bootstrap-components
+
+  # Desenvolvimento
+  - ipykernel
+  - isort
+
+  # Nao incluir por padrao:
+  # - pytorchvideo
+  #
+  # Motivo: pytorchvideo tem historico de incompatibilidade com versoes recentes
+  # de torchvision e pode falhar ao importar:
+  # ModuleNotFoundError: No module named 'torchvision.transforms.functional_tensor'
+  #
+  # O teste test_env_vc_01.py trata pytorchvideo como opcional.

@@ -1,0 +1,8 @@
+opencv-python>=4.9
+numpy>=1.26
+pandas>=2.2
+matplotlib>=3.8
+dash>=2.17
+ultralytics>=8.2
+torch>=2.3
+torchvision>=0.18
